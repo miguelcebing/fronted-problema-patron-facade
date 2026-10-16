@@ -3,6 +3,11 @@
 Web client for the Hotel Reservation System. It **does not compute prices or totals**: it only displays
 what the backend returns, whose single entry point is `HotelFacade`.
 
+## Live (production)
+
+- App: https://fronted-problema-patron-facade.vercel.app
+- Backend API it calls: https://backend-production-ddcd.up.railway.app
+
 ## Stack
 
 - React 18 + Vite 5 + `react-router-dom`.
@@ -71,6 +76,6 @@ src/
 
 ## Team
 
-- Miguel Ceballos (miguelcebing)
-- Andres (Andres523-star)
-- Santiago Rosero (ssantivr)
+- Miguel Felipe Ceballos Ramírez — ID 931697
+- Andrés Felipe Bolaños Cabrera — ID 922647
+- Ian Santiago Ordoñez Rosero — ID 909560
