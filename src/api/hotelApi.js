@@ -12,22 +12,25 @@ async function request(path, options = {}) {
   return body
 }
 
-export const consultarDisponibilidad = (fechaEntrada, fechaSalida, tipo) => {
-  const q = new URLSearchParams({ fechaEntrada, fechaSalida })
-  if (tipo) q.set('tipo', tipo)
-  return request(`/disponibilidad?${q.toString()}`)
+export const getAvailability = (checkIn, checkOut, roomType) => {
+  const query = new URLSearchParams({ checkIn, checkOut })
+  if (roomType) query.set('roomType', roomType)
+  return request(`/availability?${query.toString()}`)
 }
 
-export const crearReserva = (dto) =>
-  request('/reservar', { method: 'POST', body: JSON.stringify(dto) })
+export const createReservation = (dto) =>
+  request('/reservations', { method: 'POST', body: JSON.stringify(dto) })
 
-export const agregarServicio = (reservaId, tipoServicio) =>
-  request(`/servicios/${reservaId}`, { method: 'POST', body: JSON.stringify({ tipoServicio }) })
+export const addService = (reservationId, serviceType) =>
+  request(`/reservations/${reservationId}/services`, {
+    method: 'POST',
+    body: JSON.stringify({ serviceType }),
+  })
 
-export const hacerCheckIn = (reservaId) =>
-  request(`/checkin/${reservaId}`, { method: 'PUT' })
+export const checkIn = (reservationId) =>
+  request(`/reservations/${reservationId}/check-in`, { method: 'PUT' })
 
-export const hacerCheckOut = (reservaId) =>
-  request(`/checkout/${reservaId}`, { method: 'PUT' })
+export const checkOut = (reservationId) =>
+  request(`/reservations/${reservationId}/check-out`, { method: 'PUT' })
 
-export const obtenerReserva = (reservaId) => request(`/reserva/${reservaId}`)
+export const getReservation = (reservationId) => request(`/reservations/${reservationId}`)
