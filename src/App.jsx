@@ -1,8 +1,8 @@
 import { Routes, Route, Link, Navigate } from 'react-router-dom'
-import BuscarHabitaciones from './pages/BuscarHabitaciones.jsx'
-import ReservaForm from './pages/ReservaForm.jsx'
-import PanelReserva from './pages/PanelReserva.jsx'
-import Factura from './pages/Factura.jsx'
+import AvailabilitySearch from './pages/AvailabilitySearch.jsx'
+import ReservationForm from './pages/ReservationForm.jsx'
+import ReservationPanel from './pages/ReservationPanel.jsx'
+import Invoice from './pages/Invoice.jsx'
 
 export default function App() {
   return (
@@ -12,23 +12,23 @@ export default function App() {
           <span className="brand-mark">H</span>
           <span>
             <strong>Hotel Aurora</strong>
-            <small>Sistema de Reservas · Patrón Facade</small>
+            <small>Reservation System · Facade Pattern</small>
           </span>
         </Link>
       </header>
 
       <main className="container">
         <Routes>
-          <Route path="/" element={<BuscarHabitaciones />} />
-          <Route path="/reservar" element={<ReservaForm />} />
-          <Route path="/reserva/:id" element={<PanelReserva />} />
-          <Route path="/reserva/:id/factura" element={<Factura />} />
+          <Route path="/" element={<AvailabilitySearch />} />
+          <Route path="/reserve" element={<ReservationForm />} />
+          <Route path="/reservation/:id" element={<ReservationPanel />} />
+          <Route path="/reservation/:id/invoice" element={<Invoice />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 
       <footer className="footer">
-        Estado en memoria · Los datos se reinician al reiniciar el backend
+        State persisted in PostgreSQL · survives restarts
       </footer>
     </div>
   )

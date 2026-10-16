@@ -208,7 +208,7 @@ select:focus {
   font-size: 17px;
 }
 
-.card-room--ocupada {
+.card-room--occupied {
   opacity: 0.6;
 }
 
@@ -227,34 +227,34 @@ select:focus {
 }
 
 /* Preview de precio */
-.precio-preview {
+.price-preview {
   margin: 0;
 }
 
-.precio-preview__row {
+.price-preview__row {
   display: flex;
   justify-content: space-between;
   padding: 4px 0;
   font-size: 14px;
 }
 
-.precio-preview__row dt {
+.price-preview__row dt {
   color: var(--muted);
 }
 
-.precio-preview__row dd {
+.price-preview__row dd {
   margin: 0;
   font-weight: 600;
 }
 
-.precio-preview__total {
+.price-preview__total {
   border-top: 1px dashed var(--line);
   margin-top: 6px;
   padding-top: 10px;
   font-size: 16px;
 }
 
-.precio-preview__total dd {
+.price-preview__total dd {
   color: var(--accent);
 }
 
@@ -346,7 +346,7 @@ select:focus {
   margin-bottom: 16px;
 }
 
-.servicios {
+.services {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -367,7 +367,7 @@ select:focus {
   font-weight: 600;
 }
 
-.llave {
+.digital-key {
   margin-top: 14px;
   padding: 12px;
   background: #f0f6fb;
@@ -375,14 +375,14 @@ select:focus {
   border-radius: 8px;
 }
 
-.llave span {
+.digital-key span {
   display: block;
   font-size: 12px;
   color: var(--muted);
   margin-bottom: 4px;
 }
 
-.llave code {
+.digital-key code {
   font-size: 14px;
   word-break: break-all;
 }
@@ -436,7 +436,7 @@ select:focus {
 }
 
 /* Factura */
-.tabla-factura {
+.invoice-table {
   width: 100%;
   border-collapse: collapse;
   background: var(--surface);
@@ -447,14 +447,14 @@ select:focus {
   font-size: 14px;
 }
 
-.tabla-factura th,
-.tabla-factura td {
+.invoice-table th,
+.invoice-table td {
   text-align: left;
   padding: 10px 14px;
   border-bottom: 1px solid var(--line);
 }
 
-.tabla-factura th {
+.invoice-table th {
   background: #f7f9fb;
   color: var(--muted);
   font-size: 12px;
@@ -462,36 +462,36 @@ select:focus {
   letter-spacing: 0.04em;
 }
 
-.tabla-factura td:last-child,
-.tabla-factura th:last-child {
+.invoice-table td:last-child,
+.invoice-table th:last-child {
   text-align: right;
 }
 
-.factura__head {
+.invoice__head {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.factura__totales {
+.invoice__totals {
   margin-left: auto;
   width: min(360px, 100%);
 }
 
-.factura__totales p {
+.invoice__totals p {
   display: flex;
   justify-content: space-between;
   margin: 6px 0;
   font-size: 14px;
 }
 
-.factura__total {
+.invoice__total {
   border-top: 2px solid var(--line);
   padding-top: 10px;
   font-size: 18px;
 }
 
-.factura__total strong {
+.invoice__total strong {
   color: var(--accent);
 }
 
